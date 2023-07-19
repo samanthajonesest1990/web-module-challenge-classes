@@ -92,9 +92,9 @@ class Car {
       this.odometer = this.odometer + dist;
       this.tank = this.tank - (dist/this.milesPerGallon);
     } else {
-      this.odometer + drivableMiles;
+      this.odometer = this.odometer + drivableMiles;
       this.tank = 0;
-      return `I ran out of fuel at ${this.odometer} miles!`
+      return `I ran out of fuel at ${this.odometer} miles!`; 
     }
   }
 }
@@ -213,7 +213,7 @@ class ProjectManager extends Instructor {
   standUp(channel){
     return `${this.name} announces to ${channel}, @channel standy times!`;
   }
-  debugCode(student, subject){
+  debugsCode(student, subject){
     return `${this.name} debugs ${student.name}'s code on ${subject}`;
   }
    
